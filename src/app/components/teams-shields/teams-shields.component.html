@@ -1,0 +1,8 @@
+<div class="content-teams-shields">
+  <div *ngFor="let team of teams" class="teams-shield">
+    <div (click)="searchPlayerForTeam(team._id)" class="data-teams-shield">
+      <img src="{{team.shield}}">
+      <div class="name-team">{{team.name}}</div>
+    </div>
+  </div>
+</div>

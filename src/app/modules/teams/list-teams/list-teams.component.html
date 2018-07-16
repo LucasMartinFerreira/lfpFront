@@ -1,0 +1,70 @@
+<div class="content-teams">
+  <div *ngFor="let team of dataTeams">
+
+    <div class="content-data-team">
+      <div class="content-image">
+        <img src="{{team.shield}}">
+      </div>
+      <ul class="data-team">
+        <li class="name-president">
+          <div class="title-2-team">
+            Presidente:
+          </div>
+          <div class="content-2-team">
+            {{team.president}}
+          </div>
+        </li>
+        <li class="name-stadium">
+          <div class="title-2-team">
+            Estadio:
+          </div>
+          <div class="content-2-team">
+            {{team.stadium}}
+          </div>
+        </li>
+        <li class="name-coach">
+          <div class="title-2-team">
+            Entrenador:
+          </div>
+          <div class="content-2-team">
+            {{team.coach}}
+          </div>
+        </li>
+
+        <li class="characteristics-team">
+          <span>Historia :</span>
+        </li>
+        <li class="goals-team">
+          <div class="title-2-team">
+            Goles:
+          </div>
+          <div class="content-2-team">
+            {{team.history.goals}}
+          </div>
+        </li>
+
+        <li class="titles-team">
+          <div class="title-2-team">
+            Títulos:
+          </div>
+          <div class="content-2-team">
+            {{team.history.titles}}
+          </div>
+        </li>
+
+
+
+      </ul>
+      <div class="name-team">
+        Equipo: {{team.name}}
+      </div>
+      <div class="content-button">
+        <button (click)="goToViewPlayers(team._id)" class="btn">
+          Ver Jugadores
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

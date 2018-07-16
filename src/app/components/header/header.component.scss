@@ -1,0 +1,20 @@
+.content-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr ;
+  background-color: dimgrey;
+  padding: 0px 0px 0px 10px;
+  color: #FFFFFF;
+  .content-header__block1{
+    display: flex;
+    align-items: center;
+    .content-header__image{
+
+    }
+  }
+}
+
+img {
+  height: 100px;
+  float: right;
+}

@@ -1,0 +1,14 @@
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: dimgrey;
+  padding: 0px 0px 0px 10px;
+  color: #FFFFFF;
+  height: 44px;
+
+  .copyright{
+    display: flex;
+    align-items: center;
+  }
+}

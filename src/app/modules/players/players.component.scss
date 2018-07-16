@@ -1,0 +1,109 @@
+.content-players{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr ;
+  grid-column-gap: 30px;
+  grid-row-gap: 10px;
+  padding: 15px;
+
+  .title{
+    background-color: #4CAF50;
+    height: 30px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+    color: #FFFFFF;
+    font-size: 22px;
+  }
+
+  .title-2{
+    background-color: #FF0000;
+    height: 30px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px 0px 5px;
+    color: #FFFFFF;
+    font-size: 22px;
+  }
+
+  .content-data-player{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr ;
+    padding: 10px;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+
+    ul{
+      list-style-type: none;
+
+    }
+    .content-image{
+      display: flex;
+      justify-content: center;
+    }
+    .data-player{
+      display: grid;
+      grid-template-columns: 1fr ;
+      align-items: center;
+
+      .title-2-player{
+        font-weight: bold;
+        float: left;
+      }
+
+      .content-2-player{
+
+      }
+
+      .characteristics-player{
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        font-weight: bold;
+        span{
+          border-bottom: 3px solid #ffb632;
+          color: #474747;
+          font: 18px/33px "sourceblack",arial,helvetica;
+          padding-bottom: 6px;
+        }
+      }
+
+      .characteristics-player:after{
+        position: absolute;
+        content: '';
+        width: 90%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        bottom: -3px;
+        left: 47%;
+        border-bottom: 1px solid #4CAF50;
+      }
+
+    }
+
+    .data-player li{
+      width: 100%;
+      font: 13px/24px Arial, Helvetica;
+      position: relative;
+      margin-left: 8px;
+      padding-left: 5px;
+    }
+
+    .data-player li :before{
+      position: absolute;
+      content: " ";
+      height: 5px;
+      width: 5px;
+      background: #FFB632;
+      border-radius: 50%;
+      left: -6px;
+      top: 10px;
+    }
+
+
+  }
+}

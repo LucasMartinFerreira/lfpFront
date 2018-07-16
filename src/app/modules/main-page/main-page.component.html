@@ -1,0 +1,17 @@
+<div id="content-wrapper">
+  <!-- BEGIN MAIN -->
+  <div id="main">
+    <div id="headlines">
+      <div *ngFor="let new of news" id="main-headline">
+        <h2 class="heading">{{new.subtitle}}</h2>
+        <div class="content-image">
+          <img src="{{new.photo}}" alt="" />
+        </div>
+        <h1><a href="{{new.link}}">{{new.title}}</a></h1>
+        <p class="author">{{new.reporter}} | <span>{{new.date}}</span></p>
+        <p>{{new.text}}.</p>
+        <p><a href="{{new.link}}">Continuar leyendo &raquo;</a></p>
+      </div>
+    </div>
+  </div>
+</div>

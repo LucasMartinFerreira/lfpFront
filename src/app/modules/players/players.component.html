@@ -1,0 +1,90 @@
+
+<app-teams-shields (team)="showPlayersForTeam($event)"></app-teams-shields>
+<div class="content-players">
+  <div *ngFor="let player of dataPlayers | searchTeam: filterargs">
+
+    <div *ngIf="player.team[0]._id !== 0" class="title">
+      Equipo : {{player.team[0].name}}
+    </div>
+
+    <div *ngIf="player.team[0]._id === 0" class="title-2">
+      Equipo : En el mercado...
+    </div>
+
+    <div class="content-data-player">
+      <div class="content-image">
+        <img src="{{player.photo}}">
+      </div>
+      <ul class="data-player">
+        <li class="name-player">
+          <div class="title-2-player">
+            Nombre :
+          </div>
+          <div class="content-2-player">
+            {{player.name}}
+          </div>
+        </li>
+        <li class="surname-player">
+          <div class="title-2-player">
+            Apellidos :
+          </div>
+          <div class="content-2-player">
+            {{player.secondname}}
+          </div>
+        </li>
+        <li class="characteristics-player">
+          <span>Caraterísticas :</span>
+        </li>
+        <li class="age-player">
+          <div class="title-2-player">
+            Edad :
+          </div>
+          <div class="content-2-player">
+            {{player.characteristics.age}}
+          </div>
+        </li>
+        <li class="weight-player">
+          <div class="title-2-player">
+            Peso :
+          </div>
+          <div class="content-2-player">
+            {{player.characteristics.weight}}
+          </div>
+        </li>
+        <li class="height-player">
+          <div class="title-2-player">
+            Altura :
+          </div>
+          <div class="content-2-player">
+            {{player.characteristics.height}}
+          </div>
+        </li>
+        <li class="laterality-player">
+          <div class="title-2-player">
+            Nacionalidad :
+          </div>
+          <div class="content-2-player">
+            {{player.nationality}}
+          </div>
+        </li>
+
+        <li class="laterality-player">
+          <div class="title-2-player">
+            Demarcación :
+          </div>
+          <div class="content-2-player">
+            {{player.position}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="(dataPlayers | searchTeam: filterargs).length === 0">
+    "No se han encontrado jugadores de este equipo"
+  </div>
+
+</div>
+
+
+
+
