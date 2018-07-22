@@ -44,6 +44,10 @@
     .content-image{
       display: flex;
       justify-content: center;
+
+      img{
+        height: 230px;
+      }
     }
     .data-player{
       display: grid;

@@ -11,6 +11,22 @@
     justify-items: center;
     align-content: center;
     .data-teams-shield{
+      cursor: pointer;
+      img{
+        width: 58px;
+        height: 58px;
+      }
+
+      .name-team{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: Arial;
+      }
+    }
+
+    .data-teams-not-shield{
       img{
         width: 58px;
         height: 58px;

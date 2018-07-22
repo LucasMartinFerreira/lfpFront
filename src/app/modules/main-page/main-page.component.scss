@@ -11,12 +11,10 @@
 }
 
 #headlines {
-  /*width: 660px;*/
-  /*min-height: 300px;*/
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding-left: 20px;
-  grid-gap:42px;
+  padding-left: 11px;
+  grid-gap: 10px;
   overflow: hidden;
 
   h1{
