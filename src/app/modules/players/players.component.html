@@ -12,9 +12,11 @@
     </div>
 
     <div class="content-data-player">
-      <div class="content-image">
+      <div *ngIf="player.photo !== ''" class="content-image">
         <img src="{{player.photo}}">
-
+      </div>
+      <div *ngIf="player.photo ===''" class="content-image">
+        <img src="../../../assets/images/sinJugador.png">
       </div>
       <ul class="data-player">
         <li class="name-player">

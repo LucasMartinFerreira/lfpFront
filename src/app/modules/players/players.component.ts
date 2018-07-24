@@ -20,7 +20,7 @@ export class PlayersComponent implements OnInit {
   private withOutNameTeam: string = "Sin Equipo";
   private withOutNamePlayer: string = "Sin Nombre";
   private withOutNameMationality: string = "Sin Nacionalidad";
-  private withOutPhoto: string = "../../../assets/images/sinJugador.png";
+  private withOutPhoto: string = "";
   private withOutPosition: string = "Sin Demarcación";
   private withOutSecondname: string = "";
 

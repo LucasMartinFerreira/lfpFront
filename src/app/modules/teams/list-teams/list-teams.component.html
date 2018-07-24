@@ -2,8 +2,11 @@
   <div *ngFor="let team of dataTeams">
 
     <div class="content-data-team">
-      <div class="content-image">
+      <div *ngIf="team.shield !== ''" class="content-image">
         <img src="{{team.shield}}">
+      </div>
+      <div *ngIf="team.shield ===''"class="content-image">
+        <img src="./../../../../assets/images/sin_escudo.png">
       </div>
       <ul class="data-team">
         <li class="name-president">

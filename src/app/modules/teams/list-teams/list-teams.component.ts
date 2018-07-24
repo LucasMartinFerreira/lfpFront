@@ -12,13 +12,13 @@ import {Team} from "../../../models/teams/team";
 })
 export class ListTeamsComponent implements OnInit {
 
-  public dataTeams: any;
+  public dataTeams: any = [];
 
   private withOutName : string = "Sin nombre de equipo"
   private withOutStadium : string ="Sin estadio"
   private withOutCoach : string = "Sin entrenador"
   private withOutPresident :string = "Sin presidente"
-  private withOutShield: string = '../../../../assets/images/sin_escudo.png';
+  private withOutShield: string = '';
 
 
   constructor(private teamsService: TeamsService,
@@ -50,6 +50,8 @@ export class ListTeamsComponent implements OnInit {
 
     let array=[];
 
+
+    console.log('Datos de los equipos', data)
     for(let i=0; i<data.length; i++){
 
       let objectTeam = {
@@ -77,16 +79,16 @@ export class ListTeamsComponent implements OnInit {
         objectTeam.stadium = this.withOutStadium;
       }
 
-      if(data[i].coach!==undefined && data[i].coach!=="" && data[i].coachnull){
+      if(data[i].coach!==undefined && data[i].coach!=="" && data[i].coach!==null){
         objectTeam.coach = data[i].coach;
       }else{
         objectTeam.coach = this.withOutCoach;
       }
 
       if(data[i].president!==undefined && data[i].president!=="" && data[i].president!==null){
-        objectTeam.name = data[i].name;
+        objectTeam.president = data[i].president;
       }else{
-        objectTeam.name = this.withOutPresident;
+        objectTeam.president = this.withOutPresident;
       }
 
       if(data[i].shield!==undefined && data[i].shield!=="" && data[i].shield!==null){
