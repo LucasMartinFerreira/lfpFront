@@ -7,7 +7,7 @@ export class Player {
   "altura": number;
   "nacionalidad": string;
   "demarcacion": string;
-  "idEquipo": number;
+  "idEquipo": string;
   "nombreEquipo": string;
   "foto": string;
 }

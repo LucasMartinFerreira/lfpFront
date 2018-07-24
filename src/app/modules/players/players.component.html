@@ -3,11 +3,11 @@
 <div class="content-players">
   <div *ngFor="let player of dataPlayers | searchTeam: filterargs">
 
-    <div *ngIf="player.team[0]._id !== 0" class="title">
+    <div *ngIf="player.team[0]._id !== ''" class="title">
       Equipo : {{player.team[0].name}}
     </div>
 
-    <div *ngIf="player.team[0]._id === 0" class="title-2">
+    <div *ngIf="player.team[0]._id === ''" class="title-2">
       Equipo : En el mercado...
     </div>
 

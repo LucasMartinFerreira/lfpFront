@@ -15,7 +15,7 @@ export class PlayersComponent implements OnInit {
 
   teamFilter: string;
 
-  filterargs:any;
+  filterargs: any ;
 
   private withOutNameTeam: string = "Sin Equipo";
   private withOutNamePlayer: string = "Sin Nombre";
@@ -48,7 +48,7 @@ export class PlayersComponent implements OnInit {
       this.prepareObject(result);
 
       if(this.teamFilter ==='AllTeams'){
-        this.showPlayersForTeam(0);
+        this.showPlayersForTeam('0');
       }else{
         this.showPlayersForTeam(this.teamFilter);
       }
@@ -103,7 +103,7 @@ export class PlayersComponent implements OnInit {
         nameTeam = [
               {
                 "name" : this.withOutNameTeam,
-                "_id": 0
+                "_id": ''
               }
         ]
       }

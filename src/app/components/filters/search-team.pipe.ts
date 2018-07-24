@@ -15,7 +15,7 @@ export class SearchTeamPipe implements PipeTransform {
     }else{
 
       let string = filter.idEquipo;
-      if(string === 0){
+      if(string === "0"){
         return items;
       }else{
         return items.filter(item =>  item.team[0]._id.indexOf(string) !== -1);
