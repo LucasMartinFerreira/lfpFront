@@ -4,7 +4,7 @@
       <img  src="{{team.shield}}">
       <div class="name-team">{{team.name}}</div>
     </div>
-    <div *ngIf="team.shield ===''"  class="data-teams-not-shield">
+    <div *ngIf="team.shield ===''"  (click)="searchPlayerForTeam(team._id)" class="data-teams-not-shield">
       <img  src="https://upload.wikimedia.org/wikipedia/commons/5/53/Escudo_vac%C3%ADo.png">
       <div class="name-team">{{team.name}}</div>
     </div>
