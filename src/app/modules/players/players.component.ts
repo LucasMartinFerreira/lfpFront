@@ -45,6 +45,7 @@ export class PlayersComponent implements OnInit {
     this.playersService.getPlayers().subscribe(result =>{
       //this.dataPlayers = result.data;
 
+      console.log('Obtenemos todos los jugadores',result)
       this.prepareObject(result);
 
       if(this.teamFilter ==='AllTeams'){
@@ -88,7 +89,14 @@ export class PlayersComponent implements OnInit {
           "age" : '',
           "height" : '',
           "weight" :''
+        },
+        'weaknesses' :'',
+        'strengths':'',
+        "statistics":{
+          'goals':'',
+          'titles':''
         }
+
       }
 
 
@@ -167,6 +175,25 @@ export class PlayersComponent implements OnInit {
         object.characteristics.age = "";
         object.characteristics.height = "";
         object.characteristics.weight = "";
+      }
+
+      if(result.data[i].weaknesses!==undefined && result.data[i].weaknesses!==null && result.data[i].weaknesses!==""){
+        object.weaknesses = result.data[i].weaknesses;
+      }
+
+      if(result.data[i].strengths!== undefined && result.data[i].strengths!== null && result.data[i].strengths!== ""){
+        object.strengths = result.data[i].strengths;
+      }
+
+      if(result.data[i].statistics!==undefined && result.data[i].statistics!=="" && result.data[i].statistics!==null){
+
+        if(result.data[i].statistics.goals!==undefined && result.data[i].statistics.goals!==null && result.data[i].statistics.goals!==""){
+          object.statistics.goals = result.data[i].statistics.goals;
+        }
+
+        if(result.data[i].statistics.titles!==undefined && result.data[i].statistics.titles!=="" && result.data[i].statistics.titles!==null ){
+          object.statistics.titles = result.data[i].statistics.titles;
+        }
       }
 
       array.push(object);

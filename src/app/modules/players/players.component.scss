@@ -42,8 +42,9 @@
 
     }
     .content-image{
-      display: flex;
+      display: grid;
       justify-content: center;
+      align-content: center;
 
       img{
         height: 230px;
